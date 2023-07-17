@@ -1,0 +1,365 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* STYLE */
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr;
+}
+
+.header {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    place-items: center;
+}
+
+.header-img-div {
+    height: 60%;
+    width : 60%;
+    /* background-color: red; */
+
+}
+
+.header-img-div img {
+    height: 100%;
+    width: 100%;
+}
+
+.header-title {
+    height: 60%;
+    width: 40%;
+    /* background-color: red; */
+}
+
+.header-title h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    background-color:#F0EEF1 ;
+}
+
+.btn-div {
+    place-self: center;
+    /* background-color: red; */
+    height:40%;
+    width: 15%;
+}
+
+.btn-div button {
+    height: 100%;
+    width: 100%;
+    border: 1px ;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: bolder;
+    background-color: white;
+}
+
+.btn-div button:hover {
+    background-color: black;
+    color: white;
+}
+
+.book-cards {
+    /* background-color: red; */
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr) ;
+    place-items: center;
+
+}
+
+.card {
+    height: 80%;
+    width: 80%;
+    padding-top: 5%;
+    display: grid;
+    background-color: white;
+    grid-template-rows: 1fr 1fr 1fr 2fr 2fr;
+    border-radius: 15px;
+    place-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+}
+
+.card h1 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+.readStatusBtn {
+    height: 80%;
+    width: 60%;
+    border: 0px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.readStatusBtn:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+}
+
+.readStatusBtnTrue {
+    background-color: lightgreen;
+    color: black;
+}
+
+.readStatusBtnFalse{
+    background-color: #bc544b;
+    color: white;
+}
+
+.deleteBook {
+    height:60%;
+    width: 20%;
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.deleteBook:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5)
+}
+
+
+/* MODAL */
+.formModal {
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+   
+    display: none;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+
+}
+
+
+.modal-content {
+    height: 40vh;
+    width: 30vh;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    background-color: #F0EEF1;
+    border-radius: 15px;
+
+}
+
+.modal-content h1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.modal-content form {
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.upper-input{
+    height: 15%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 18px;
+    border: 1px;
+    border-radius: 10px;
+    font-size: 1.2rem
+    
+}
+
+.checkbox {
+    margin-left: 20px;
+    /* display: flex;
+    flex-direction: row; */
+}
+
+
+.submit-btn {
+    width: 70%;
+    height: 15%;
+    margin-left: 40px;
+    border: 0;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #9FFF9C;
+}
+
+.submit-btn:hover {
+    background-color: #8FE58C;
+}
+
+/* CARD */
+
+
+
+/* footer */
+
+.footer {
+    background-color: #F0EEF1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
