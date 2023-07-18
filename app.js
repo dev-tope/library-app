@@ -83,10 +83,12 @@ function displayLibrary() {
     
         // //DELETE BUTTON
         const deleteBook = document.createElement('div');
-        deleteBook.classList.add('deleteBook');
+        deleteBook.classList.add('deleteBook')
+        deleteBook.classList.add('delBtn');
         deleteBook.id = i;
 
         const delImg = document.createElement('img');
+        delImg.classList.add('delBtn');
         delImg.src = 'images/outline_delete_white_24dp.png'
         deleteBook.appendChild(delImg);
 
@@ -125,7 +127,7 @@ function removeBook(index){
 
 //Deletes Card
 cardDiv.addEventListener('click', function(e){
-    if (e.target.classList.contains('deleteBook')) {
+    if (e.target.classList.contains('delBtn')) {
         const bookId = Number(e.target.id);
         removeBook(bookId);
         resetCardDiv();
