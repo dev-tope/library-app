@@ -28,11 +28,20 @@ window.addEventListener('click', function(e){
 myLibrary = [];
 
 
-function Book(title, author, pages, readStatus) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this. readStatus = readStatus;
+// function Book(title, author, pages, readStatus) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this. readStatus = readStatus;
+// }
+
+class Book {
+    constructor(title, author, pages, readStatus){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.readStatus = readStatus;
+    }
 }
 
 
@@ -145,7 +154,6 @@ cardDiv.addEventListener('click', function(e){
         console.log(myLibrary)
     }
 })
-
 
 //submits form + add book to library + display library
 form.addEventListener('submit', function(e){
